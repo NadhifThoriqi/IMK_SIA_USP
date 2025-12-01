@@ -57,7 +57,7 @@ main {
 .usp-logo {
     width: 150px; /* Logo sedikit lebih kecil */
     height: 190px; 
-    background-image: url("assets/usp.png");
+    background-image: url("../assets/usp.png");
     background-size: cover; /* Pastikan gambar menutupi seluruh elemen */
     background-position: center; /* Pusatkan gambar */
 }

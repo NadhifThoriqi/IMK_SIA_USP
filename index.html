@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang - USP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang</h1>
+    </header>
+
+    <main class="cross-fade-container">
+        <div class="logo-area">
+            <div class="usp-logo"></div>
+        </div>
+        
+        <form class="login-form">
+            <div class="input-group">
+                <label for="nama_nim" class="input-label">NAMA/NIM</label>
+                <input type="text" id="nama_nim" name="nama_nim" class="input-field">
+            </div>
+            
+            <div class="input-group">
+                <label for="password" class="input-label">PASSWORD</label>
+                <input type="password" id="password" name="password" class="input-field">
+            </div>
+            
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+
+            <button type="submit" class="login-button">LOGIN</button>
+
+            <a href="#" class="forgot-password">LUPA PASSWORD?</a>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

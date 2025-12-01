@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+====================
+        Body
+====================
+*/
+/* Gaya dasar untuk elemen gelembung */
+.bubble {
+    position: absolute; /* Posisinya relatif terhadap body/halaman */
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 0, 0, 0.5); /* Merah semi-transparan */
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Menengahkan gelembung tepat di titik klik */
+    /* Pastikan gelembung di atas elemen lain, tapi di bawah pop-up jika ada */
+    z-index: 999; 
+    pointer-events: none; /* Penting! Mencegah gelembung mengganggu klik berikutnya */
+}
+
+/*
+======================
+        Header
+======================
+*/
+header {
+    background-color: #ff0000;
+    color: white;
+    /* Perbaikan: Ganti 0 100% dengan padding vertikal yang sesuai */
+    padding: 15px 0; 
+    text-align: center; /* Tambahkan ini agar teks di tengah */
+    margin-bottom: 30px;
+}
+
+/*
+====================
+        Main 
+====================
+*/
+main {
+    text-align: center;
+}
+
+/* Logo dan Teks USP */
+.logo-area {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.usp-logo {
+    width: 150px; /* Logo sedikit lebih kecil */
+    height: 190px; 
+    background-image: url("/assets/usp.png");
+    background-size: cover; /* Pastikan gambar menutupi seluruh elemen */
+    background-position: center; /* Pusatkan gambar */
+}
+
+.usp-text {
+    font-size: 1.2em; /* Teks USP lebih kecil */
+    font-weight: bold;
+}
+
+/* Form Login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Group Label dan Input */
+.input-group {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 350px; /* Lebar maksimal input group diperkecil */
+}
+
+.input-label {
+    color: white;
+    background-color: #ff0000; /* Merah Solid untuk Label */
+    padding: 10px 15px; /* Padding lebih besar */
+    margin-right: 5px; /* Jarak label dan input lebih dekat */
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    border-radius: 5px; 
+    min-width: 120px; 
+    height: 40px; /* Tinggi label sama dengan input */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field {
+    flex-grow: 1; 
+    padding: 10px;
+    border: none; /* Hilangkan border */
+    border-radius: 5px;
+    outline: none;
+    /* Warna latar belakang merah muda/merah muda pucat yang solid */
+    background-color: #ff0000; 
+    color: white; /* Teks di dalam input putih */
+    font-weight: bold;
+    min-width: 150px;
+    height: 40px;
+}
+
+/* Remember Me Checkbox */
+.remember-me {
+    align-self: center; /* Posisikan ke tengah */
+    width: 100%;
+    max-width: 350px; /* Ikuti lebar input group */
+    margin: 10px 0 40px 0;
+    font-size: 0.9em;
+    text-align: left; /* Teks checkbox ke kiri */
+}
+
+.remember-me input[type="checkbox"] {
+    /* 1. Hapus tampilan bawaan, sehingga kita bisa mendesain ulang */
+    appearance: none; 
+    -webkit-appearance: none; 
+    
+    /* 2. Gaya kotak dasar (kotak kecil) */
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    background-color: white; /* Kotak awal: Putih dengan border hitam */
+    
+    /* Pengaturan posisi */
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    
+    /* Pastikan kursor pointer saat diarahkan ke label/input */
+    cursor: pointer; 
+}
+
+/* 3. Gaya saat checkbox DICENTANG */
+.remember-me input[type="checkbox"]:checked {
+    /* Ganti latar belakang menjadi warna solid (misalnya, merah) saat dicentang */
+    /* Ini mensimulasikan status "aktif" */
+    background-color: red; 
+    
+    /* ATAU (opsi yang lebih baik untuk tanda centang) */
+    /* Anda dapat menggunakan properti content pada ::after untuk membuat tanda centang */
+    /* Di sini kita hanya mengubah warna menjadi hitam solid sesuai permintaan Anda sebelumnya */
+}
+
+/* Opsional: Jika Anda ingin menambahkan tanda centang '✓' di dalamnya */
+.remember-me input[type="checkbox"]:checked::after {
+    content: '✓'; /* Tanda centang unicode */
+    font-size: 10px; /* Ukuran tanda centang */
+    color: white; /* Warna tanda centang */
+    position: absolute;
+    top: -1px;
+    left: 1px;
+}
+.remember-me label {
+    margin-left: 5px;
+    font-weight: bold; /* Teks 'Remember me' tebal */
+    font-size: 1em;
+}
+
+/* Tombol Login */
+.login-button {
+    background-color: #ff0000; 
+    color: white;
+    border: none;
+    padding: 12px 60px; /* Padding lebih besar untuk tombol yang lebih lebar */
+    border-radius: 20px; 
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+    width: 200px; /* Lebar tombol login lebih besar */
+}
+
+.login-button:hover {
+    background-color: #cc0000;
+}
+
+/* Lupa Password */
+.forgot-password {
+    color: black;
+    font-size: 0.7em; /* Ukuran teks lebih kecil */
+    text-decoration: none; 
+    margin-top: 5px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/*
+=========================
+        keyframes
+=========================
+*/
+
+/* 
+====================
+        Body
+====================
+*/
+/* Keyframe untuk animasi gelembung */
+@keyframes expand-bubble {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        /* Ukuran maksimum gelembung */
+        width: 80px; 
+        height: 80px;
+        opacity: 0; /* Menghilang di akhir animasi */
+    }
+}
+
+
+/*
+====================
+        Main 
+====================
+*/
+/* Media Query untuk layar kecil (opsional, untuk responsif) */
+@media (max-width: 400px) {
+    .input-group {
+        flex-direction: column; /* Label dan input bertumpuk */
+        max-width: 90%;
+    }
+
+    .input-label {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+}

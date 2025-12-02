@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+====================
+        Body
+====================
+*/
+/* Gaya dasar untuk elemen gelembung */
+.bubble {
+    position: absolute; /* Posisinya relatif terhadap body/halaman */
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 0, 0, 0.5); /* Merah semi-transparan */
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Menengahkan gelembung tepat di titik klik */
+    /* Pastikan gelembung di atas elemen lain, tapi di bawah pop-up jika ada */
+    z-index: 999; 
+    pointer-events: none; /* Penting! Mencegah gelembung mengganggu klik berikutnya */
+}
+
+/*
+=========================
+        keyframes
+=========================
+*/
+
+/* 
+====================
+        Body
+====================
+*/
+/* Keyframe untuk animasi gelembung */
+@keyframes expand-bubble {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        /* Ukuran maksimum gelembung */
+        width: 80px; 
+        height: 80px;
+        opacity: 0; /* Menghilang di akhir animasi */
+    }
+}

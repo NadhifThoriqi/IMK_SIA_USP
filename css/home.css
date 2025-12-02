@@ -1,0 +1,166 @@
+body {
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+/* --- 1. Header Utama (Logo, HOME, Lonceng) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 18px 25px;
+    background-color: red;
+}
+
+.logo-placeholder {
+    /* Placeholder untuk logo kiri atas */
+    width: 50px; 
+    height: 63px;
+    background: url('/assets/usp.png') center/cover; /* Ganti dengan logo Anda */
+    /* Untuk meniru tampilan kotak di gambar */
+    /* border: 1px solid #ccc;  */
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Kami gunakan ikon user pada gambar */
+    font-size: 1.5em; 
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.header-icon {
+    color: black;
+    font-size: 1.8em;
+}
+
+/* --- 2. Area Informasi Profil --- */
+.info-card-wrapper {
+    background-color: #ff0000; /* Latar belakang merah untuk area card */
+    padding: 20px 15px 30px 15px;
+    margin-bottom: 10px;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 50px; /* Sudut sangat melengkung */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-icon-large {
+    background-color: #ff0000; /* Lingkaran Merah */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    margin-right: 15px;
+}
+
+.profile-details p {
+    margin: 3px 0;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+/* --- 3. Area Menu Tombol --- */
+.menu-grid {
+    display: grid;
+    /* 4 kolom responsif */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    padding: 0 15px 30px 15px;
+}
+
+.menu-button {
+    background-color: white;
+    color: #ff0000; /* Teks Merah */
+    border: 2px solid #ff0000; /* Border Merah */
+    border-radius: 20px; /* Sudut melengkung */
+    padding: 15px 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    /* Untuk menata ikon dan teks secara vertikal jika menggunakan block */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.menu-button i, .menu-button .icon-text {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.menu-button:hover {
+    background-color: #fff5f5;
+}
+
+/* --- 4. Area Berita Terkini --- */
+.news-header-banner {
+    background-color: #ff0000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+}
+
+.news-header-banner h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.view-all-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+/* --- 5. Item Berita --- */
+.news-item {
+    display: flex;
+    padding: 0 15px;
+    align-items: flex-start;
+}
+
+.news-icon-small {
+    background-color: #ff0000; /* Kotak Merah Solid */
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.news-icon-small i {
+    /* Hanya ikon user hitam di dalam kotak merah */
+    color: black; 
+}
+
+.news-content {
+    flex-grow: 1;
+    font-size: 0.9em;
+    line-height: 1.4;
+    text-align: justify;
+}

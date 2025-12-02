@@ -16,7 +16,7 @@ header {
     /* Placeholder untuk logo kiri atas */
     width: 50px; 
     height: 63px;
-    background: url('/assets/usp.png') center/cover; /* Ganti dengan logo Anda */
+    background: url("../assets/usp.png") center/cover; /* Ganti dengan logo Anda */
     /* Untuk meniru tampilan kotak di gambar */
     /* border: 1px solid #ccc;  */
     background-color: white;

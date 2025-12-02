@@ -191,7 +191,6 @@ main {
 /* Media Query untuk layar kecil (opsional, untuk responsif) */
 @media (max-width: 400px) {
     .input-group {
-        flex-direction: column; /* Label dan input bertumpuk */
         max-width: 90%;
     }
 

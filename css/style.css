@@ -192,14 +192,15 @@ main {
 @media (max-width: 400px) {
     .input-group {
         flex-direction: row; /* Label dan input bertumpuk */
-        max-width: 90%;
+        max-width: 100%;
+        min-width: 50%;
     }
 
     .input-label {
-        width: 18%;
+        max-width: 18%;
     }
 
     .input-field {
-        width: 68%;
+        max-width: 68%;
     }
 }

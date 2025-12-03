@@ -139,32 +139,54 @@ header h1 {
 }
 
 /* --- 5. Item Berita --- */
-.news-item {
-    display: flex;
-    padding: 0 15px;
-    align-items: flex-start;
+.news-foto img{
+    /* Gambar mengapung ke kiri, teks mengalir di sampingnya */
+    float: left; 
+    margin: 0 15px 10px 0; 
+    width: 150px;
+    height: auto;
 }
 
-.news-icon-small {
-    background-color: #ff0000; /* Kotak Merah Solid */
-    color: white;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    margin-right: 15px;
-}
-
-.news-icon-small i {
+.news-foto i {
     /* Hanya ikon user hitam di dalam kotak merah */
     color: black; 
 }
 
 .news-content {
     flex-grow: 1;
-    font-size: 0.9em;
-    line-height: 1.4;
-    text-align: justify;
+}
+
+/* Clearfix untuk mengatasi masalah tinggi container */
+.clearfix {
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .menu-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 350px) {
+    .menu-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .news-foto{
+        /* 1. HILANGKAN FLOAT */
+        /* Menghilangkan properti float yang membuat teks berada di samping */
+        float: none;
+        
+        /* 2. ATUR ULANG LEBAR */
+        /* Buat gambar mengambil seluruh lebar (atau lebar yang diinginkan) */
+        width: 150px; 
+        
+        /* 3. ATUR ULANG MARGIN */
+        /* Pusatkan gambar dan beri jarak di bawah agar tidak menempel pada teks */
+        display: block; /* Penting untuk menghilangkan float dan memungkinkan margin auto */
+        margin: 0 auto 15px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

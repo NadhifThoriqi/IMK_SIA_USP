@@ -189,7 +189,7 @@ main {
 ====================
 */
 /* Media Query untuk layar kecil (opsional, untuk responsif) */
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     .input-group {
         flex-direction: row; /* Label dan input bertumpuk */
         max-width: 100%;

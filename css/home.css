@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 25px 18px 25px;
+    padding: 25px 25px 10px 25px;
     background-color: red;
 }
 
@@ -30,7 +30,7 @@ header {
 }
 
 header h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: bold;
 }
 
@@ -183,11 +183,10 @@ header h1 {
     clear: both;
 }
 
-@media (max-width: 600px) {
-    .menu-grid{
-        grid-template-columns: repeat(2, 1fr);
+@media screen and (max-height: 360px) {
+    .news-container{
+        position: relative;
     }
-
     .news-foto{
         /* 1. HILANGKAN FLOAT */
         /* Menghilangkan properti float yang membuat teks berada di samping */
@@ -207,7 +206,16 @@ header h1 {
         align-items: center;
     }
 }
-@media (max-width: 400px) {
+
+@media (max-width: 800px) {
+    .menu-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .news-container{
+        position: relative;
+    }
+}
+@media (max-width: 300px) {
     .menu-grid{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -231,7 +239,7 @@ header h1 {
         align-items: center;
     }
 
-    .news-container{
+    /* .news-container{
         position: relative;
-    }
+    } */
 }

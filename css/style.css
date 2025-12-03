@@ -196,12 +196,12 @@ main {
     }
 
     .input-label {
-        width: 20%;
+        width: 18%;
         margin-right: 0;
         margin-bottom: 5px;
     }
 
     .input-field {
-        width: 70%;
+        width: 68%;
     }
 }

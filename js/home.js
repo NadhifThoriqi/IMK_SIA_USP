@@ -18,7 +18,7 @@ if (Number.isNaN(parseFloat(params.get("nama_nim")))) {
     }
 profile.innerHTML = profil
 header.innerHTML = `
-    <a href="home.html?nama_nim=${params.get("nama_nim")}&password=" class="logo-placeholder"></a>
+    <a href="home.html?nama_nim=${params.get("nama_nim")}&password=${params.get("password")}" class="logo-placeholder"></a>
     <h1>HOME</h1>
     <i class="fas fa-bell header-icon"></i>
 `

@@ -80,23 +80,27 @@ header h1 {
     grid-template-columns: repeat(4, 1fr); 
     gap: 10px;
     padding: 0 15px 30px 15px;
+    /* Penting: Memastikan item meregang untuk mengisi tinggi yang sama */
+    align-items: stretch;
 }
 
 .menu-button {
     background-color: white;
-    color: #ff0000; /* Teks Merah */
-    border: 2px solid #ff0000; /* Border Merah */
-    border-radius: 20px; /* Sudut melengkung */
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    border-radius: 50px;
     padding: 15px 5px;
     font-size: 0.8em;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.2s;
-    /* Untuk menata ikon dan teks secara vertikal jika menggunakan block */
+    /* Flex untuk menata ikon dan teks di dalam form */
     display: flex;
     flex-direction: column; 
     align-items: center;
+    /* Membuat tombol terlihat BESAR dengan mengisi seluruh lebar kolom dan tinggi yang sama */
+    width: 100%;
 }
 
 .menu-button i, .menu-button .icon-text {

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME - Aplikasi Kampus</title>
+    <title>HOME - SIA USP</title>
+    <link rel="icon" href="/assets/usp.png">
     <link rel="stylesheet" href="css/bubble.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,11 +15,15 @@
     </header>
 
     <div class="info-card-wrapper">
+        <!-- tombol -->
         <div class="profile-card">
-            <div class="profile-icon-large">
-                <i class="fas fa-user"></i>
-            </div>
-            <div class="profile-details" id="profile">
+            <form action="test.html">
+                <input type="hidden" name="test" value="PROFILE">
+                <button class="btn profile-icon-large">
+                    <i class="fas fa-user"></i>
+                </button>
+            </form>
+            <div cl ass="profile-details" id="profile">
                 
             </div>
         </div>
@@ -50,19 +55,27 @@
         </form>
     </div>
 
-    <div class="news-header-banner">
-        <h2>BERITA TERKINI</h2>
-        <a href="#" class="view-all-link">Lihat semua</a>
-    </div>
-
-    <div class="news-item">
-        <div class="news-foto">
-            <img src="/assets/usp.png" alt="Logo USP">
+    <div class="news-container">
+        <div class="news-header-banner">
+            <h2>BERITA TERKINI</h2>
+            <form action="test.html" method="get">
+                <input type="hidden" name="test" value="BERITA TERKINI">
+                <button class="btn">
+                    <i class="view-all-link"></i> Lihat semua
+                </button>
+            </form>
+            <!-- <a href="#" class="view-all-link">Lihat semua</a> -->
         </div>
-        <p class="news-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore illum, eveniet, esse earum aspernatur voluptates inventore, nam consectetur minima quaerat impedit veritatis id ipsa debitis alias hic vero officiis officia!
-        </p>
-        <div class="clearfix"></div>
+        
+        <div class="news-item">
+            <div class="news-foto">
+                <img src="/assets/usp.png" alt="Logo USP">
+            </div>
+            <p class="news-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore illum, eveniet, esse earum aspernatur voluptates inventore, nam consectetur minima quaerat impedit veritatis id ipsa debitis alias hic vero officiis officia!
+            </p>
+            <div class="clearfix"></div>
+        </div>
     </div>
 
     <script src="js/bubble.js"></script>

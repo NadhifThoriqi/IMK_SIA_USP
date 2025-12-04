@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search)
-const profile = document.getElementById("header")
+const profile = document.getElementById("header-group")
 
 profile.innerHTML += `
     <a href="home.html?${params.get('home_nim')}&${params.get('home_password')}" class="logo-usp"></a>

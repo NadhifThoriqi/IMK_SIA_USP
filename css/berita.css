@@ -1,5 +1,5 @@
 body {
-    background-color: white; /* Latar belakang abu-abu muda */
+    background-color: white; 
     padding-bottom: 20px;
 }
 
@@ -17,18 +17,13 @@ header {
 }
 
 .logo-usp {
-    /* Placeholder untuk logo kiri atas */
     width: 50px; 
     height: 63px;
-    background: url("../assets/usp.webp") center/cover; /* Ganti dengan logo Anda */
-    /* Untuk meniru tampilan kotak di gambar */
-    /* border: 1px solid #ccc;  */
+    background: url("../assets/usp.webp") center/cover;
     border-radius: 20%;
-    /* background-color: white; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* Kami gunakan ikon user pada gambar */
     font-size: 1.5em; 
     text-align: center;
 }
@@ -36,6 +31,9 @@ header {
 header h1 {
     font-size: 3em;
     font-weight: bold;
+    /* PERBAIKAN: Posisikan h1 ke tengah (jika ada logo dan ikon) */
+    flex-grow: 1;
+    text-align: center;
 }
 
 .header-icon {
@@ -52,13 +50,12 @@ header h1 {
 
 /* --- 2. Area Konten Berita --- */
 .content-area {
-    background-color: white; /* Latar belakang Merah Solid untuk semua item berita */
+    background-color: white;
     padding: 15px 10px 10px 10px;
 }
 
 /* Styling untuk Tombol Submit */
 .news-btn-wrapper {
-    /* Meniru news-item */
     display: flex; 
     align-items: center;
     background-color: white;
@@ -66,19 +63,21 @@ header h1 {
     padding: 15px;
     min-height: 80px; 
     
-    /* Tombol harus mengisi 100% lebar induknya (FORM) */
     width: 100%; 
     
-    /* Hapus default styling tombol */
-    border: 10%;
-    border-color: #ff0000;
+    /* PERBAIKAN: Perbaiki properti border yang tidak valid */
+    border: none; /* Hapus border default */
     cursor: pointer;
-    text-align: left; /* Penting agar teks tidak di tengah */
-    margin-bottom: 10px; /* Jarak antar item */
-    box-shadow: 5px 5px 10px rgba(255, 132, 132, 0.5); /* 5px ke kanan, 5px ke bawah, blur 10px, warna hitam semi-transparan */
+    text-align: left;
+    margin-bottom: 10px; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Shadow yang lebih netral */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Hilangkan class .news-btn yang tidak relevan lagi */
+.news-btn-wrapper:hover {
+    transform: translateY(-2px); /* Efek mengangkat */
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
 
 .item-icon {
     width: 50px;
@@ -88,19 +87,20 @@ header h1 {
     align-items: center;
     font-size: 2.2em;
     margin-right: 15px;
-    border-radius: 5px; /* Sedikit melengkung */
+    border-radius: 5px;
+    flex-shrink: 0; /* Penting agar tidak menyusut */
 }
 
 .red-bg {
-    background-color: #ff0000; /* Kotak ikon merah */
+    background-color: #ff0000;
 }
 
 .black-icon {
-    color: black; /* Ikon hitam (misalnya untuk Kasus Korupsi) */
+    color: black;
 }
 
 .white-icon {
-    color: white; /* Ikon putih (misalnya untuk Kafe dan Lomba Lari) */
+    color: white;
 }
 
 /* Sesuaikan ukuran ikon di dalam kotak */
@@ -124,7 +124,5 @@ header h1 {
 @media (max-width: 800px) {
     header h1 {
         font-size: 2.3em;
-        font-weight: bold;
-        text-align: center;
     }
 }

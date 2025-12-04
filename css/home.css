@@ -117,6 +117,19 @@ header h1 {
     /* PERBAIKAN: Hapus position: absolute. Biarkan mengalir secara normal (position: static). */
     /* Posisi diatur secara natural di bawah menu-grid */
     margin-bottom: 20px; /* Tambahkan margin bawah */
+    
+    /* KUNCI: Posisi absolut relatif terhadap parent-container */
+    position: absolute; 
+    
+    /* Posisikan 0px dari batas bawah parent */
+    bottom: 0; 
+    
+    /* Pastikan mengisi lebar parent */
+    left: 0; 
+    right: 0;
+    
+    /* padding: 5px;
+    text-align: center; */
 }
 
 .news-header-banner {
@@ -160,21 +173,6 @@ header h1 {
 
 
 /* --- 5. Item Berita --- */
-.news-container{
-    /* KUNCI: Posisi absolut relatif terhadap parent-container */
-    position: absolute; 
-    
-    /* Posisikan 0px dari batas bawah parent */
-    bottom: 0; 
-    
-    /* Pastikan mengisi lebar parent */
-    left: 0; 
-    right: 0;
-    
-    /* padding: 5px;
-    text-align: center; */
-}
-
 .news-item {
     margin: 0 5%;
 }
@@ -241,7 +239,13 @@ header h1 {
     .menu-grid{
         grid-template-columns: repeat(2, 1fr);
     }
-    
+}
+
+@media (max-width: 300px) {
+    /* Menu Grid berubah dari 2 menjadi 1 kolom pada layar sangat kecil */
+    .menu-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
     /* 2. Berita Item berubah menjadi tumpukan vertikal */
     /* Hapus float dan buat gambar mengambil seluruh lebar pada breakpoint ini */
     .news-btn {
@@ -265,12 +269,5 @@ header h1 {
     }
     .news-content {
         text-align: left; /* Pastikan teks kembali ke kiri untuk tampilan tumpuk */
-    }
-}
-
-@media (max-width: 300px) {
-    /* Menu Grid berubah dari 2 menjadi 1 kolom pada layar sangat kecil */
-    .menu-grid{
-        grid-template-columns: repeat(1, 1fr);
     }
 }

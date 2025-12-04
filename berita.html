@@ -3,72 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOLOM BERITA - USP</title>
+    <title>KOLOM BERITA - SIA USP</title>
     <link rel="stylesheet" href="css/berita.css">
+    <link rel="stylesheet" href="css/bubble.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-        <header class="main-header">
-            <div class="header-left">
-                <div class="logo-usp">
-                    <img src="/assets/usp.webp" alt="Logo USP"> 
-                    <!-- <p>USP</p> -->
+    <header id="header">
+            <!-- foto -->
+    </header>
+    <hr/>
+
+    <main class="content-area">
+        <form action="test.html" method="get" class="slide-in-bottom">
+            <div id="input">
+                <input type="hidden" name="test" value="MEMBACA BERITA TENTANG KASUS KORUPSI OLEH SALAH SATU DOSEN">
+            </div>
+            <button class="news-btn-wrapper">
+                <div class="item-icon red-bg">
+                    <i class="fas fa-user black-icon"></i> 
                 </div>
+                <div class="item-text">
+                    KASUS KORUPSI OLEH SALAH SATU DOSEN
+                </div>
+            </button>
+        </form>
+        
+        <form action="test.html" method="get" class="slide-in-bottom">
+            <div id="input">
+                <input type="hidden" name="test" value="MEMBACA BERITA TENTANG PEMBUKAAN KAFE BARU DI KAMPUS">
             </div>
-            
-            <h1>KOLOM BERITA</h1>
-            <i class="fas fa-bell header-icon"></i>
-        </header>
+            <button class="news-btn-wrapper">
+                <div class="item-icon red-bg">
+                    <i class="fas fa-mug-hot white-icon"></i>
+                </div>
+                <div class="item-text">
+                    PEMBUKAAN KAFE BARU DI KAMPUS
+                </div>
+            </button>
+        </form>
 
-        <main class="content-area">
-            <form action="test.html" method="get">
-                <input type="hidden" name="test" value="MEMBACA BERITA TERKINI">
-                <button class="news-btn-wrapper">
-                    <div class="item-icon red-bg">
-                        <i class="fas fa-user black-icon"></i> 
-                    </div>
-                    <div class="item-text">
-                        KASUS KORUPSI OLEH SALAH SATU DOSEN
-                    </div>
-                </button>
-            </form>
-            
-            <form action="test.html" method="get">
-                <input type="hidden" name="test" value="MEMBACA BERITA TERKINI">
-                <button class="news-btn-wrapper">
-                    <div class="item-icon red-bg">
-                        <i class="fas fa-mug-hot white-icon"></i>
-                    </div>
-                    <div class="item-text">
-                        PEMBUKAAN KAFE BARU DI KAMPUS
-                    </div>
-                </button>
+        <form action="test.html" method="get" class="slide-in-bottom">
+            <div id="input">
+                <input type="hidden" name="test" value="MEMBACA BERITA TENTANG LOMBA LARI STRAVA KAMPUS">
             </div>
+            <button class="news-btn-wrapper">
+                <div class="item-icon red-bg">
+                    <i class="fas fa-running white-icon"></i>
+                </div>
+                <div class="item-text">
+                    LOMBA LARI STRAVA KAMPUS
+                </div>
+            </button>
+        </form>
 
-            <form action="test.html" method="get">
-                <input type="hidden" name="test" value="MEMBACA BERITA TERKINI">
-                <button class="news-btn-wrapper">
-                    <div class="item-icon red-bg">
-                        <i class="fas fa-running white-icon"></i>
-                    </div>
-                    <div class="item-text">
-                        LOMBA LARI STRAVA KAMPUS
-                    </div>
-                 </button>
+        <form action="test.html" method="get" class="slide-in-bottom">
+            <div id="input">
+                <input type="hidden" name="test" value="MEMBACA BERITA TENTANG ....................">
             </div>
-            
-            <form action="test.html" method="get">
-                <input type="hidden" name="test" value="MEMBACA BERITA TERKINI">
-                <button class="news-btn-wrapper">
-                    <div class="item-icon red-bg square-icon">
-                        </div>
-                    <div class="item-text">
-                        ....................
+            <button class="news-btn-wrapper">
+                <div class="item-icon red-bg square-icon">
                     </div>
-                 </button>
-            </div>
-        </main>
-    <!-- </div> -->
+                <div class="item-text">
+                    ....................
+                </div>
+            </button>
+        </form>
+    </main>
     <script src="js/bubble.js"></script>
+    <script src="js/berita.js"></script>
 </body>
 </html>

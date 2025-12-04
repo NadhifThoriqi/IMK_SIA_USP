@@ -3,6 +3,10 @@ body {
     padding-bottom: 20px;
 }
 
+hr {
+    color: white;
+}
+
 /* --- 1. Header Utama (Logo, HOME, Lonceng) --- */
 header {
     display: flex;
@@ -16,15 +20,11 @@ header {
     /* Placeholder untuk logo kiri atas */
     width: 50px; 
     height: 63px;
-    background: url("../assets/usp.webp") center/cover; /* Ganti dengan logo Anda */
-    /* Untuk meniru tampilan kotak di gambar */
-    /* border: 1px solid #ccc;  */
+    background: url("../assets/usp.webp") center/cover;
     border-radius: 20%;
-    /* background-color: white; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* Kami gunakan ikon user pada gambar */
     font-size: 1.5em; 
     text-align: center;
 }
@@ -41,14 +41,14 @@ header h1 {
 
 /* --- 2. Area Informasi Profil --- */
 .info-card-wrapper {
-    background-color: #ff0000; /* Latar belakang merah untuk area card */
+    background-color: #ff0000;
     padding: 20px 15px 30px 15px;
     margin-bottom: 10px;
 }
 
 .profile-card {
     background-color: white;
-    border-radius: 50px; /* Sudut sangat melengkung */
+    border-radius: 50px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@ header h1 {
 }
 
 .profile-icon-large {
-    background-color: #ff0000; /* Lingkaran Merah */
+    background-color: #ff0000;
     color: white;
     width: 60px;
     height: 60px;
@@ -77,11 +77,10 @@ header h1 {
 /* --- 3. Area Menu Tombol --- */
 .menu-grid {
     display: grid;
-    /* 4 kolom responsif */
+    /* Default: 4 kolom untuk layar besar */
     grid-template-columns: repeat(4, 1fr); 
     gap: 10px;
     padding: 0 15px 30px 15px;
-    /* Penting: Memastikan item meregang untuk mengisi tinggi yang sama */
     align-items: stretch;
 }
 
@@ -95,12 +94,10 @@ header h1 {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.2s;
-    /* Flex untuk menata ikon dan teks di dalam form */
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s; /* Tambah transisi untuk efek hover */
     display: flex;
     flex-direction: column; 
     align-items: center;
-    /* Membuat tombol terlihat BESAR dengan mengisi seluruh lebar kolom dan tinggi yang sama */
     width: 100%;
 }
 
@@ -111,15 +108,58 @@ header h1 {
 
 .menu-button:hover {
     background-color: #fff1f1;
-    /* Efek 2: Peningkatan Skala (Memperbesar sedikit) */
-    /* Membuat tombol terlihat "pop-out" */
     transform: scale(1.01);
-
-    /* Efek 3: Bayangan (Memberikan kedalaman) */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* --- 4. Area Berita Terkini --- */
+.news-container{
+    /* PERBAIKAN: Hapus position: absolute. Biarkan mengalir secara normal (position: static). */
+    /* Posisi diatur secara natural di bawah menu-grid */
+    margin-bottom: 20px; /* Tambahkan margin bawah */
+}
+
+.news-header-banner {
+    background-color: #ff0000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+}
+
+.news-header-banner h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.btn{
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+    color: white;
+    cursor: pointer;
+}
+
+/* Styling baru untuk <a> di Lihat semua */
+.view-all-link-wrapper {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* Tambahkan sedikit styling agar terlihat seperti tombol */
+    padding: 5px 10px; 
+    border-radius: 5px;
+    display: inline-flex; /* Agar ikon dan teks sejajar */
+    align-items: center;
+}
+
+.view-all-link-wrapper:hover {
+    text-decoration: underline;
+}
+
+
+/* --- 5. Item Berita --- */
 .news-container{
     /* KUNCI: Posisi absolut relatif terhadap parent-container */
     position: absolute; 
@@ -134,39 +174,7 @@ header h1 {
     /* padding: 5px;
     text-align: center; */
 }
-.news-header-banner {
-    background-color: #ff0000;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 15px;
-    margin-bottom: 20px;
-}
 
-.news-header-banner h2, .news-header-banner form .btn {
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.btn{
-    background-color: #ff0000;
-    border: 2px solid #ff0000;
-    color: white;
-    cursor: pointer;
-}
-
-.view-all-link {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9em;
-}
-
-.view-all-link:hover {
-    text-decoration: underline;
-}
-
-/* --- 5. Item Berita --- */
 .news-item {
     margin: 0 5%;
 }
@@ -176,89 +184,93 @@ header h1 {
     border: 2px solid white;
     color: black;
     cursor: pointer;
+    /* Tambahkan display flex untuk memudahkan tata letak item berita */
+    display: flex;
+    align-items: center;
+    text-align: left; /* Teks berita default ke kiri */
+    padding: 10px;
+    width: 100%; /* Penting agar tombol mengambil seluruh lebar */
 }
 
-.news-foto img{
-    /* Gambar mengapung ke kiri, teks mengalir di sampingnya */
+.news-foto{
+    /* PERBAIKAN: Jaga float default untuk desktop/layar besar */
     float: left; 
-    margin: 0 15px 10px 0; 
-    width: 150px;
-    height: auto;
+    margin-right: 15px; 
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0; /* Pastikan tidak menyusut saat di dalam flex */
 }
 
+/* sementara */
 .news-foto i {
-    /* Hanya ikon user hitam di dalam kotak merah */
-    color: black; 
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2.2em;
+    border-radius: 5px;
 }
 
 .news-content {
     text-align: justify;
-    /* margin-right: 5%; */
     flex-grow: 1;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0; /* Hapus margin default p */
 }
 
-/* Clearfix untuk mengatasi masalah tinggi container */
+/* Clearfix masih diperlukan untuk mengatasi float pada news-foto */
 .clearfix {
     clear: both;
 }
 
-@media screen and (max-height: 360px) {
+/* Hapus media query max-height: 360px karena tidak relevan dan duplikat */
+
+
+/* --- MEDIA QUERIES (Responsivitas) --- */
+
+@media (max-width: 1200px) {
     .news-container{
-        position: relative;
+        /* KUNCI: Posisi absolut relatif terhadap parent-container */
+        position: relative; 
     }
-    .news-foto{
-        /* 1. HILANGKAN FLOAT */
-        /* Menghilangkan properti float yang membuat teks berada di samping */
-        float: none;
-        
-        /* 2. ATUR ULANG LEBAR */
-        /* Buat gambar mengambil seluruh lebar (atau lebar yang diinginkan) */
-        width: 150px; 
-        
-        /* 3. ATUR ULANG MARGIN */
-        /* Pusatkan gambar dan beri jarak di bawah agar tidak menempel pada teks */
-        display: block; /* Penting untuk menghilangkan float dan memungkinkan margin auto */
-        margin: 0 auto 15px auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media (max-width: 800px) {
+    
+    /* 1. Menu Grid berubah dari 4 menjadi 2 kolom */
     .menu-grid{
         grid-template-columns: repeat(2, 1fr);
     }
-    .news-container{
-        position: relative;
+    
+    /* 2. Berita Item berubah menjadi tumpukan vertikal */
+    /* Hapus float dan buat gambar mengambil seluruh lebar pada breakpoint ini */
+    .news-btn {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .news-foto {
+        /* Memastikan gambar/icon menempati lebar penuh untuk tampilan tumpuk */
+        float: none;
+        width: 100%; 
+        height: 150px; /* Tingkatkan tinggi agar lebih terlihat */
+        display: flex; /* Ganti dari block ke flex untuk centering ikon */
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 15px auto; /* Pusatkan dan beri margin bawah */
+    }
+    .news-foto i {
+        /* Pastikan ikon di tengah gambar yang dilebarkan */
+        width: 100px;
+        height: 100px;
+    }
+    .news-content {
+        text-align: left; /* Pastikan teks kembali ke kiri untuk tampilan tumpuk */
     }
 }
+
 @media (max-width: 300px) {
+    /* Menu Grid berubah dari 2 menjadi 1 kolom pada layar sangat kecil */
     .menu-grid{
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .news-foto{
-        /* 1. HILANGKAN FLOAT */
-        /* Menghilangkan properti float yang membuat teks berada di samping */
-        float: none;
-        
-        /* 2. ATUR ULANG LEBAR */
-        /* Buat gambar mengambil seluruh lebar (atau lebar yang diinginkan) */
-        width: 150px; 
-        
-        /* 3. ATUR ULANG MARGIN */
-        /* Pusatkan gambar dan beri jarak di bawah agar tidak menempel pada teks */
-        display: block; /* Penting untuk menghilangkan float dan memungkinkan margin auto */
-        margin: 0 auto 15px auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* .news-container{
-        position: relative;
-    } */
 }

@@ -63,30 +63,39 @@ body {
     padding: 15px 10px 10px 10px;
 }
 
-/* Tombol Kembali */
-.back-button {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    display: block; /* Agar bisa mengambil seluruh lebar */
-    margin-bottom: 20px;
-}
-
-.back-button i {
-    margin-right: 5px;
-}
-
 /* Gaya Item Berita */
-.news-item {
+/* .news-item {
     display: flex;
     align-items: center;
     background-color: white;
     border-radius: 5px;
     padding: 15px;
-    margin-bottom: 10px;
-    min-height: 80px; /* Tinggi minimum agar item tidak terlalu tipis */
+    margin-bottom: 10px; */
+    /* Tinggi minimum agar item tidak terlalu tipis */
+    /* min-height: 80px; */
+/* } */
+
+/* Styling untuk Tombol Submit */
+.news-btn-wrapper {
+    /* Meniru news-item */
+    display: flex; 
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 80px; 
+    
+    /* Tombol harus mengisi 100% lebar induknya (FORM) */
+    width: 100%; 
+    
+    /* Hapus default styling tombol */
+    border: none;
+    cursor: pointer;
+    text-align: left; /* Penting agar teks tidak di tengah */
+    margin-bottom: 10px; /* Jarak antar item */
 }
+
+/* Hilangkan class .news-btn yang tidak relevan lagi */
 
 .item-icon {
     width: 50px;

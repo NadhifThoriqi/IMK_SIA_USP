@@ -1,7 +1,7 @@
 document.addEventListener('click', function(event) {
     // 1. Dapatkan posisi klik
-    const clickX = event.clientX; // Koordinat horizontal
-    const clickY = event.clientY; // Koordinat vertikal
+    const clickX = event.pageX; // Koordinat horizontal
+    const clickY = event.pageY; // Koordinat vertikal
 
     // 2. Buat elemen gelembung baru
     const bubble = document.createElement('div');

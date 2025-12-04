@@ -167,6 +167,17 @@ header h1 {
 }
 
 /* --- 5. Item Berita --- */
+.news-item {
+    margin: 0 5%;
+}
+
+.news-btn {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    cursor: pointer;
+}
+
 .news-foto img{
     /* Gambar mengapung ke kiri, teks mengalir di sampingnya */
     float: left; 
@@ -181,7 +192,8 @@ header h1 {
 }
 
 .news-content {
-    margin-right: 5%;
+    text-align: justify;
+    /* margin-right: 5%; */
     flex-grow: 1;
 }
 

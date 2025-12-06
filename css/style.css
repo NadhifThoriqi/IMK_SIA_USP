@@ -1,18 +1,4 @@
 /*
-======================
-        Header
-======================
-*/
-header {
-    background-color: #ff0000;
-    color: white;
-    /* Perbaikan: Ganti 0 100% dengan padding vertikal yang sesuai */
-    padding: 15px 0; 
-    text-align: center; /* Tambahkan ini agar teks di tengah */
-    margin-bottom: 30px;
-}
-
-/*
 ====================
         Main 
 ====================
@@ -61,8 +47,6 @@ main {
 }
 
 .input-label {
-    color: white;
-    background-color: #ff0000; /* Merah Solid untuk Label */
     padding: 10px 15px; /* Padding lebih besar */
     margin-right: 5px; /* Jarak label dan input lebih dekat */
     font-weight: bold;
@@ -83,8 +67,6 @@ main {
     border-radius: 5px;
     outline: none;
     /* Warna latar belakang merah muda/merah muda pucat yang solid */
-    background-color: #ff0000; 
-    color: white; /* Teks di dalam input putih */
     font-weight: bold;
     min-width: 150px;
     height: 40px;
@@ -178,6 +160,11 @@ main {
     text-decoration: underline;
 }
 
+.btn{
+    border: 0 solid transparent;
+    cursor: pointer;
+}
+
 /*
 =========================
         keyframes
@@ -189,7 +176,16 @@ main {
 ====================
 */
 /* Media Query untuk layar kecil (opsional, untuk responsif) */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
     .input-group {
         flex-direction: row; /* Label dan input bertumpuk */
         max-width: 100%;

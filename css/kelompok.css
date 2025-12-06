@@ -1,0 +1,141 @@
+body {
+    background-color: rgba(77, 98, 112, 0.205);
+}
+
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    padding: 25px 25px 10px 25px;
+    text-align: center;
+}
+
+/* Set urutan default untuk Layar Besar (Kiri, Tengah, Kanan) */
+header .top a {order: 1;
+}
+
+header h1 {
+    order: 2;
+}
+
+header .top form {
+    order: 3;
+}
+
+/* Mengatur elemen di dalam .top agar tetap sejajar horizontal di desktop */
+header .top {
+    display: contents; 
+    align-items: center;
+    justify-content: space-between;
+    /* Kita bisa menggunakan lebar yang lebih kecil untuk .top agar h1 punya ruang di tengah */
+    width: auto;
+}
+
+/* Mengatur elemen di dalam .top (tidak diatur oleh order header) */
+header .top a {
+    margin-right: 15px; /* Jarak antara Logo dan h1 */
+}
+
+header .top form {
+    margin-left: 15px; /* Jarak antara h1 dan Ikon */
+}
+
+
+.logo-placeholder {
+    /* Placeholder untuk logo kiri atas */
+    width: 50px; 
+    height: 63px;
+    background: url("../assets/usp.webp") center/cover;
+    border-radius: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.5em; 
+    text-align: center;
+    background-position: center;
+}
+
+.header-icon {
+    color: black;
+    font-size: 2.9em;
+    font-weight: bold;
+    text-align: center;
+    background-position: center;
+}
+
+/* Styling untuk elemen utama tabel */
+table {
+    width: 80%; /* Lebar tabel 80% dari lebar layar */
+    margin: 20px auto; /* Memberi margin atas/bawah 20px dan rata tengah */
+    border-collapse: separate; /* Menggabungkan border sel menjadi satu */
+}
+
+/* Styling untuk setiap sel (Header dan Data) */
+th, td {
+    /* Border tipis berwarna abu-abu */
+    border: 1px solid #4b4b4b; 
+    /* Ruang di dalam sel */
+    padding: 10px; 
+    /* Teks rata kiri */
+    text-align: left; 
+}
+
+.no {
+    text-align: center;
+    width: 4%;
+}
+
+/* Styling khusus untuk Header Tabel */
+
+/* Styling untuk baris ganjil dan genap (Striped rows) */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Latar belakang abu-abu muda untuk baris genap */
+}
+
+/* Styling saat kursor diarahkan ke baris */
+tbody tr:hover {
+    /* Warna lebih gelap saat di-hover */
+    background-color: rgba(54, 69, 79, 0.5);
+}
+  
+@media (max-width: 600px) {
+    /* Container utama (header) diatur menjadi kolom, menentukan urutan vertikal */
+    header {
+        flex-direction: column; 
+        padding: 15px; /* Kurangi padding di mobile */
+    }
+
+    /* KOREKSI: Menerapkan scroll pada wadah .table-container */
+    .table-container { 
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Untuk scroll yang lebih halus di iOS */
+    }
+
+    /* Beri lebar minimum pada tabel agar scroll muncul */
+    table {
+        width: 610px; /* Lebar minimum agar scroll muncul */
+    }
+    
+    /* Mengatur Urutan Baru: .top (Kiri & Kanan) di atas, h1 (Tengah) di bawah */
+    header .top {
+        order: 1; /* Akan muncul di atas 'h1' */
+        width: 100%;
+        display: flex; /* Memastikan Logo dan Ikon tetap berdampingan */
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header h1 {
+        order: 2; /* Akan muncul di bawah .top */
+        width: 100%;
+        font-size: 1.3em; /* Kecilkan sedikit font di mobile */
+        margin-top: 10px; /* Tambahkan sedikit jarak */
+        font-weight: normal;
+        text-align: center;
+    }
+
+    /* Hapus margin agar Logo dan Ikon bisa mentok ke tepi */
+    header .top a, header .top form {
+        margin: 0;
+    }
+}

@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Datang - SIA USP</title>
     <link rel="icon" href="/assets/usp.webp">
-    <link rel="stylesheet" href="css/bubble.css">
+    <link rel="stylesheet" href="css/all_style.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="scale-in-ver-top">
-        <h1>Selamat Datang</h1>
+    <header class="scale-in-ver-top background-red">
+        <br>
+        <h1>SELAMAT DATANG</h1>
+        <br>
     </header>
 
     <main>
@@ -20,13 +23,13 @@
         
         <form class="login-form" action="home.html" method="get">
             <div class="input-group slide-in-elliptic-bottom-fwd">
-                <label for="nama_nim" class="input-label">NAMA/NIM</label>
-                <input type="text" id="nama_nim" name="nama_nim" class="input-field" required>
+                <label for="nama_nim" class="input-label background-red">NAMA/NIM</label>
+                <input type="text" id="nama_nim" name="nama_nim" class="input-field background-red" required>
             </div>
             
             <div class="input-group slide-in-elliptic-bottom-fwd">
-                <label for="password" class="input-label">PASSWORD</label>
-                <input type="password" id="password" name="password" class="input-field">
+                <label for="password" class="input-label background-red">PASSWORD</label>
+                <input type="password" id="password" name="password" class="input-field background-red">
             </div>
             
             <div class="remember-me slide-in-elliptic-top-fwd">
@@ -36,9 +39,16 @@
 
             <button type="submit" class="login-button slide-in-elliptic-bottom-fwd">LOGIN</button>
 
-            <a href="#" class="forgot-password slide-in-elliptic-top-fwd">LUPA PASSWORD?</a>
         </form>
+        <form class="login-form" action="test.html" method="get">
+            <input type="hidden" name="test" value="Hehe.. Saya lupa password 😭">
+            <button class="forgot-password slide-in-elliptic-top-fwd btn background-white">LUPA PASSWORD?</button>
+        </form>
+
     </main>
+    
+    <a href="kelompok.html" id="copyright-footer">&copy; 2025 Tugas Kelompok IMK-SIA-USP</a>
+    
     <script src="js/bubble.js"></script>
 </body>
 </html>

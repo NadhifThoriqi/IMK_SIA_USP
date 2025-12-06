@@ -1,0 +1,90 @@
+/*
+============
+    Body
+============
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    padding-bottom: 50px; /* Memberi ruang di bagian bawah agar tidak menutupi copyright */
+}
+
+.background-white {
+    background-color: white;
+    color: black;
+}
+
+.background-white-red {
+    background-color: white;
+    color: red;
+}
+
+.background-black {
+    background-color: black;
+    color: white;
+}
+
+.background-red {
+    background-color: red;
+    color: white;
+}
+
+.background-red-black {
+    background-color: red;
+    color: black;
+}
+
+/*      
+==============
+    Header
+==============
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 10px 25px;
+}
+
+.logo-placeholder {
+    /* Placeholder untuk logo kiri atas */
+    width: 50px; 
+    height: 63px;
+    background: url("../assets/usp.webp") center/cover;
+    border-radius: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 1.5em; 
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.header-icon {
+    font-size: 2.9em;
+}
+
+/*       
+============
+    Body
+============
+*/
+body {
+    padding-bottom: 50px; /* Memberi ruang di bagian bawah agar tidak menutupi copyright */
+}
+
+.btn{
+    border: 2px solid transparent;
+    cursor: pointer;
+}

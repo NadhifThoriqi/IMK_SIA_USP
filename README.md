@@ -1,1 +1,1 @@
-![Deskripsi Gambar](assets/usp.png)
+![Deskripsi Gambar](assets/usp.webp)

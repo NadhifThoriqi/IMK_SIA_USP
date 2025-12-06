@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME - SIA USP</title>
     <link rel="icon" href="/assets/usp.webp">
-    <link rel="stylesheet" href="css/bubble.css">
+    <link rel="stylesheet" href="css/headers.css">
+    <link rel="stylesheet" href="css/all_style.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header id="header">
-        <div class="logo-placeholder"></div>
-        <h1>HOME</h1>
-        <i class="fas fa-bell header-icon"></i>
+    <header id="header" class="background-red">
+        <br>
+        <!-- header -->
+        <br>
     </header>
-    <hr/>
+    <hr class="background-black" />
 
     <main>
-        <div class="info-card-wrapper slide-in-top">
-            <div class="profile-card slide-in-elliptic-top-fwd">
+        <div class="info-card-wrapper background-red slide-in-top">
+            <div class="profile-card background-white slide-in-elliptic-top-fwd">
                 <form action="test.html" method="get">
                     <input type="hidden" name="test" value="PROFILE">
-                    <button class="btn profile-icon-large">
+                    <button class="btn profile-icon-large background-red">
                         <i class="fas fa-user"></i>
                     </button>
                 </form>
                 <div class="profile-details" id="profile">
-                    <p>Nama: [Nama Mahasiswa]</p>
-                    <p>NIM: [NIM]</p>
-                    <p>Fakultas: [Fakultas]</p>
-                </div>
+                    <!-- profile -->
+                </div> 
             </div>
         </div>
         
@@ -39,7 +39,7 @@
                 <div class="input-grub">
                     <input type="hidden" name="test" value="JADWAL">
                 </div>
-                <button class="menu-button">
+                <button class="menu-button background-white-red">
                     <i class="fas fa-calendar-alt"></i> JADWAL
                 </button>
             </form>
@@ -47,7 +47,7 @@
                 <div class="input-grub">
                     <input type="hidden" name="test" value="NILAI">
                 </div>
-                <button class="menu-button">
+                <button class="menu-button background-white-red">
                     <i class="fas fa-file-alt"></i> NILAI
                 </button>
             </form>
@@ -56,50 +56,57 @@
                     <input type="hidden" name="test" value="PEMBAYARAN">
                     <input type="hidden" name="tes22" value="PEMBAYARAN1">
                 </div>
-                <button class="menu-button">
+                <button class="menu-button background-white-red">
                     <i class="fas fa-money-check-alt"></i> PEMBAYARAN
                 </button>
             </form>
             <form action="https://e-learning.usp.ac.id/" method="get" class="bounce-in-fwd">
-                <button class="menu-button">
+                <button class="menu-button background-white-red">
                     <i class="fas fa-graduation-cap"></i> E-LEARNING
                 </button>
             </form>
         </div>
         
         <div class="news-container">
-            <div class="news-header-banner">
+            <div class="news-header-banner background-red">
                 <h2>BERITA TERKINI</h2>
                 <form action="berita.html" method="get">
-                    <div class="input-grub">
-                        <input type="hidden" name="test" value="BERITA TERKINI">
-                    </div>
-                    <button class="view-all-link-wrapper btn">
-                        Lihat semua <i class="fas fa-chevron-right"></i>
+                    <div class="input-grub"></div>
+                    <button class="view-all-link-wrapper btn background-red">
+                        Lihat semua &nbsp;<i class="fas fa-chevron-right"></i>
                     </button>
                 </form>
-                
-                <!-- <a href="berita.html?test=BERITA%20TERKINI&nama_nim=Nadhif Thoriqi&password=" class="view-all-link-wrapper">
-                    Lihat semua <i class="fas fa-chevron-right"></i>
-                </a> -->
             </div>
             
             <div class="news-item">
-                <form action="test.html" method="get">
+                <form class="news-item-1" action="test.html" method="get">
                     <input type="hidden" name="test" value="MEMBACA BERITA TENTANG KASUS KORUPSI OLEH SALAH SATU DOSEN">
-                    <button class="news-btn">
+                    <button class="news-btn background-white">
                         <div class="news-foto tilt-in-fwd-bl">
-                            <i class="fas fa-user black-icon"></i> 
+                            <img src="assets/usp.webp" alt="Logo USP">
                         </div>
                         <p class="news-content slide-in-bottom">
                             KASUS KORUPSI OLEH SALAH SATU DOSEN
                         </p>
-                        </button>
+                    </button>
+                </form>
+                <form class="news-item-2" action="test.html" method="get">
+                    <input type="hidden" name="test" value="MEMBACA BERITA TENTANG PEMBUKAAN KAFE BARU DI KAMPUS">
+                    <button class="news-btn background-white">
+                        <div class="news-foto tilt-in-fwd-bl background-red">
+                            <i class="fas fa-mug-hot white-icon"></i> 
+                        </div>
+                        <p class="news-content slide-in-bottom">
+                            PEMBUKAAN KAFE BARU DI KAMPUS
+                        </p>
+                    </button>
                 </form>
             </div>
-            </div>
+        </div>
     </main>
-        
+    
+    <div id="copyright-footer"></div>
+
     <script src="js/bubble.js"></script>
     <script src="js/home.js"></script>
 </body>

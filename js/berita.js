@@ -33,7 +33,7 @@ items.forEach((item, index) => {
 
 document.addEventListener("DOMContentLoaded", function() {
     // Pilih semua elemen yang ingin di-lazy load
-    let lazySections = document.querySelectorAll('.lazy-section');
+    let lazySections = document.querySelectorAll('.slide-in-bottom');
 
     // Opsi untuk observer: kapan harus mulai memuat. RootMargin: '0px 0px 200px 0px'
     // berarti mulai muat saat elemen berjarak 200px dari bagian bawah viewport.

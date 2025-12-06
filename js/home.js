@@ -1,6 +1,6 @@
 const header = document.getElementById("header")
 const profile = document.getElementById("profile")
-const copyright = document.getElementById("copyright-footer")
+const copyright = document.getElementById("copyright")
 const home_path = document.querySelectorAll(".input-grub")
 const NIMRandom = `${new Date().getFullYear()}${new Date().getMonth()}${new Date().getDate()}0${new Date().getDay()}`;
 const params = new URLSearchParams(window.location.search)
@@ -40,7 +40,7 @@ home_path.forEach(element => {
 });
 
 copyright.innerHTML = `
-    <a href="kelompok.html?home_nim=nama_nim=${params.get("nama_nim")}&home_password=password=${params.get("password")}">
+    <a href="kelompok.html?home_nim=nama_nim=${params.get("nama_nim")}&home_password=password=${params.get("password")}" id="copyright-footer">
         &copy; 2025 Tugas Kelompok IMK-SIA-USP
     </a>
 `

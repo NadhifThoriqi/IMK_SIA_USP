@@ -17,7 +17,7 @@ if (params.get('home_nim')) {
 } else {
     header.innerHTML += `
         <div class="top">
-            <a href="/" class="class="background-red""><div class="logo-placeholder"></div></a>
+            <a href="index.html" class="class="background-red""><div class="logo-placeholder"></div></a>
             <form action="test.html" method="get">
                 <input type="hidden" name="test" value="Notifikasi">
                 <button class="btn background-red-black">

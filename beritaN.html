@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita SIA - Carousel</title>
+    <link rel="icon" href="/assets/usp.webp">
+    <link rel="stylesheet" href="css/all_style.css"> 
+    <link rel="stylesheet" href="css/animation.css"> 
+    <link rel="stylesheet" href="css/beritaN.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="header-group" class="background-red"></header>
+    <hr class="background-black" />
+
+    <main>
+        <nav class="sub-nav">
+            <a href="#" class="nav-item active">Populer</a>
+            <a href="#" class="nav-item">Terbaru</a>
+            <a href="#" class="nav-item">Trending</a>
+        </nav>
+
+        <section class="main-news-section grid-layout">
+            <article class="side-item left-item" onclick="changeSlide(-1)">
+                <div class="side-image-placeholder" id="left-image"></div>
+                <div class="side-caption" id="left-caption"></div>
+                <div class="nav-arrow left">❮</div>
+            </article>
+
+            <article class="center-item" id="center-item"></article>
+
+            <article class="side-item right-item" onclick="changeSlide(1)">
+                <div class="side-image-placeholder" id="right-image"></div>
+                <div class="side-caption" id="right-caption"></div>
+                <div class="nav-arrow right">❯</div>
+            </article>
+
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+        
+        <section class="tags-section">
+            <h2 class="tags-title">TAGS POPULER #</h2>
+            <div class="tags-grid">
+                <span>#SaFin Univ</span>
+                <span>#SaFin PATI</span>
+                <span>#Kafe baru</span>
+                <span>#Gedung baru</span>
+                <span>#Tren baru</span>
+                <span>#ACARA KAMPUS</span>
+            </div>
+        </section>
+
+        <section class="promo-banner">
+            <div class="promo-content">
+                <div class="coffee-icon">☕</div>
+                <p>BUY 10 GET 1 FREE SETIAP HARI JUMAT, TAPI KAMI LIBUR</p>
+            </div>
+        </section>
+
+        <footer class="footer-news-actions">
+            <button class="footer-btn">Berita lainnya</button>
+            <button class="footer-btn">Berita lainnya</button>
+            <button class="footer-btn">Berita lainnya</button>
+        </footer>
+    </main>
+    
+    <script src="js/bubble.js"></script> 
+    <script src="js/berita.js"></script> 
+    <script src="js/beritaN.js"></script> 
+</body>
+</html>

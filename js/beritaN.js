@@ -12,13 +12,17 @@ function showSlides(n) {
     let slides = slidesData;
     let totalSlides = slides.length;
 
-    // 1. Hitung Indeks
+    // 1. Looping Indeks (1 ke N)
     if (n > totalSlides) { slideIndex = 1 }
     if (n < 1) { slideIndex = totalSlides }
 
-    let centerIndex = slideIndex - 1;
-    let leftIndex = (centerIndex - 1 + totalSlides) % totalSlides; // Looping ke belakang
-    let rightIndex = (centerIndex + 1) % totalSlides; // Looping ke depan
+    let centerIndex = slideIndex - 1; // Indeks array (0 hingga n-1)
+    
+    // Looping ke belakang (kiri)
+    let leftIndex = (centerIndex - 1 + totalSlides) % totalSlides; 
+    
+    // Looping ke depan (kanan)
+    let rightIndex = (centerIndex + 1) % totalSlides; 
 
     // 2. Update Konten Slot
     // Slot Tengah (Penuh)
@@ -26,30 +30,27 @@ function showSlides(n) {
         <form action="test.html" method="get">
             <input type="hidden" name="test" value="${slides[centerIndex].title}">
             
-            <button class="btn">
-                <img class="side-image-placeholder" src="${slides[centerIndex].image}" alt="${slides[centerIndex].title}">
+            <button class="btn side-image-placeholder" style="background-image: url(${slides[centerIndex].image});">
                 <div class="center-caption">${slides[centerIndex].title}</div>
             </button>
         </form>
     `;
-    
-    // ${style.backgroundImage=slides[centerIndex].image}
-    
+        
     // Slot Kiri (Samping)
     document.getElementById('left-image').style.backgroundImage = `url(${slides[leftIndex].image})`;
-    document.getElementById('left-caption').textContent = "Sebelumnya: " + slides[leftIndex].title;
     
     // Slot Kanan (Samping)
     document.getElementById('right-image').style.backgroundImage = `url(${slides[rightIndex].image})`;
-    document.getElementById('right-caption').textContent = "Berikutnya: " + slides[rightIndex].title;
-
+    
     // 3. Update Dots
     updateDots(slideIndex);
 }
 
 function updateDots(current) {
     let dotsContainer = document.querySelector('.slider-dots');
-    dotsContainer.innerHTML = ''; // Hapus dots lama
+    if (!dotsContainer) return; // Tambahkan pengaman
+    
+    dotsContainer.innerHTML = ''; 
 
     for (let i = 0; i < slidesData.length; i++) {
         let dot = document.createElement('span');
@@ -57,7 +58,6 @@ function updateDots(current) {
         if (i + 1 === current) {
             dot.classList.add('active');
         }
-        // Atur onclick untuk pindah ke slide i+1
         dot.setAttribute('onclick', `currentSlide(${i + 1})`); 
         dotsContainer.appendChild(dot);
     }
@@ -73,7 +73,31 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+function Desktop(slides) {
+    const desktopElement = document.getElementsByClassName("desktop")[0]; 
+    let htmlOutput = "";
+
+    // Iterasi untuk tampilan Desktop
+    for (const slide of slides) { 
+        htmlOutput += `
+            <article>
+                <img class="side-image-placeholder" src="${slide.image}" alt="${slide.title}"> 
+                <p class="center-caption">${slide.title}</p>
+            </article>
+        `;
+    }
+
+    if (desktopElement) {
+        desktopElement.innerHTML = htmlOutput;
+    } else {
+        console.error("Elemen dengan kelas 'desktop' tidak ditemukan!");
+    }
+};
+
 // Inisialisasi saat dimuat
 document.addEventListener("DOMContentLoaded", function() {
+    // Jalankan showSlides untuk menginisialisasi carousel mobile
     showSlides(slideIndex);
+    // Jalankan Desktop untuk mengisi konten desktop (berjalan baik di kedua kasus)
+    Desktop(slidesData);
 });

@@ -26,6 +26,8 @@ header.innerHTML = `
     <h1>HOME</h1>
     <form action="test.html" method="get">
         <input type="hidden" name="test" value="Notifikasi">
+        <input type="hidden" name="home_nim" value="nama_nim=${params.get("nama_nim")}">
+        <input type="hidden" name="home_password" value="password=${params.get("password")}">
         <button class="btn background-red-black">
             <i class="fas fa-bell header-icon"></i>
         </button>

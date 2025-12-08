@@ -5,17 +5,24 @@ const home_path = document.querySelectorAll(".input-grub")
 const NIMRandom = `${new Date().getFullYear()}${new Date().getMonth()}${new Date().getDate()}0${new Date().getDay()}`;
 const params = new URLSearchParams(window.location.search)
 
-if (Number.isNaN(parseFloat(params.get("nama_nim")))) {
+// Kondisi untuk: Input adalah Teks/Nama yang Valid
+if (Number.isNaN(parseFloat(params.get("nama_nim"))) && (params.get("nama_nim") !== null && params.get("nama_nim") !== 'null')) {
     var profil = `
         <p>Nama                  : ${params.get("nama_nim")}</p>
         <p>Prodi           &nbsp;: Teknik Informatika</p>
         <p>NIM &nbsp;&nbsp;&nbsp;: ${NIMRandom}</p>
         ` 
-} else {
+} else if (parseFloat(params.get("nama_nim"))) {
     var profil = `
         <p>Nama                  : Mahasiswa</p>
         <p>Prodi           &nbsp;: Teknik Informatika</p>
         <p>NIM &nbsp;&nbsp;&nbsp;: ${params.get("nama_nim")}</p>
+        ` 
+} else {
+    var profil = `
+        <p>Nama                  : Mahasiswa</p>
+        <p>Prodi           &nbsp;: Teknik Informatika</p>
+        <p>NIM &nbsp;&nbsp;&nbsp;: ${NIMRandom}</p>
     `
 }
 

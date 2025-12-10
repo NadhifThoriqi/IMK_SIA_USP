@@ -9,43 +9,6 @@
 /* ==================================== */
 /* 2. HEADER & NAVIGASI (LANJUTAN)      */
 /* ==================================== */
-/* ... (header, logo, nav-icons) ... */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 25px 10px 25px;
-}
-
-.logo-usp {
-    width: 50px; 
-    height: 63px;
-    background: url("../assets/usp.webp") center/cover;
-    border-radius: 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-size: 1.5em; 
-    text-align: center;
-}
-
-header h1 {
-    font-size: 3em;
-    font-weight: bold;
-    /* PERBAIKAN: Posisikan h1 ke tengah (jika ada logo dan ikon) */
-    flex-grow: 1;
-    text-align: center;
-}
-
-.header-icon {
-    font-size: 2.9em;
-}
-
-.btn{
-    border: 2px solid transparent;
-    cursor: pointer;
-}
-
 /* SUB-NAVIGASI */
 .sub-nav {
     display: flex;
@@ -81,6 +44,10 @@ header h1 {
     max-width: 400px; /* Batasi lebar agar tidak terlalu lebar di desktop */
     margin: 0 auto; 
     cursor: pointer;
+}
+
+.hots-article:hover {
+    transform: scale(1.01);
 }
 
 /* Kontainer Gambar dan Label */
@@ -154,7 +121,7 @@ header h1 {
 }
 
 /* Styling Artikel Desktop */
-.desktop article {
+.desktop article form {
     position: relative;
     min-width: 300px; /* Lebar minimum untuk setiap slide desktop */
     height: 350px;
@@ -163,7 +130,7 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.desktop article img {
+.desktop article form button.btn {
     width: 100%;
     height: 100%;
     object-fit: cover;

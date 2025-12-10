@@ -1,0 +1,165 @@
+/*
+=========
+    *
+=========
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    padding-bottom: 50px; /* Memberi ruang di bagian bawah agar tidak menutupi copyright */
+}
+
+.background-white {
+    background-color: white;
+    color: black;
+}
+
+.background-white-red {
+    background-color: white;
+    color: red;
+}
+
+.background-black {
+    background-color: black;
+    color: white;
+}
+
+.background-red {
+    background-color: red;
+    color: white;
+}
+
+.background-red-black {
+    background-color: red;
+    color: black;
+}
+
+/*      
+==============
+    Header
+==============
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px 25px 10px 25px;
+    text-align: center;
+}
+
+/* Set urutan default untuk Layar Besar (Kiri, Tengah, Kanan) */
+header .top a {order: 1;}
+header h1 {order: 2;}
+header .top form {order: 3;}
+
+/* Mengatur elemen di dalam .top agar tetap sejajar horizontal di desktop */
+header .top {
+    display: contents; 
+    align-items: center;
+    justify-content: space-between;
+    /* Kita bisa menggunakan lebar yang lebih kecil untuk .top agar h1 punya ruang di tengah */
+    width: auto;
+}
+
+/* Mengatur elemen di dalam .top (tidak diatur oleh order header) */
+header .top a {
+    margin-right: 15px; /* Jarak antara Logo dan h1 */
+}
+
+header .top form {
+    margin-left: 15px; /* Jarak antara h1 dan Ikon */
+}
+
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    /* PERBAIKAN: Posisikan h1 ke tengah (jika ada logo dan ikon) */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logo-placeholder {
+    /* Placeholder untuk logo kiri atas */
+    background: url("../assets/usp.webp") center/cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20%;
+    text-align: center;
+    font-size: 1.5em; 
+    height: 63px;
+    width: 50px; 
+}
+
+.header-icon {
+    color: black;
+    font-size: 2.9em;
+    font-weight: bold;
+    text-align: center;
+    background-position: center;
+}
+
+/*       
+============
+    Body
+============
+*/
+body {
+    padding-bottom: 50px; /* Memberi ruang di bagian bawah agar tidak menutupi copyright */
+}
+
+.btn{
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    /* Container utama (header) diatur menjadi kolom, menentukan urutan vertikal */
+    header {
+        flex-direction: column; 
+        padding: 15px; /* Kurangi padding di mobile */
+    }
+
+    /* KOREKSI: Menerapkan scroll pada wadah .table-container */
+    .table-container { 
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Untuk scroll yang lebih halus di iOS */
+    }
+
+    /* Beri lebar minimum pada tabel agar scroll muncul */
+    table {
+        width: 610px; /* Lebar minimum agar scroll muncul */
+    }
+    
+    /* Mengatur Urutan Baru: .top (Kiri & Kanan) di atas, h1 (Tengah) di bawah */
+    header .top {
+        order: 1; /* Akan muncul di atas 'h1' */
+        width: 100%;
+        display: flex; /* Memastikan Logo dan Ikon tetap berdampingan */
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header h1 {
+        order: 2; /* Akan muncul di bawah .top */
+        width: 100%;
+        font-size: 1.3em; /* Kecilkan sedikit font di mobile */
+        margin-top: 10px; /* Tambahkan sedikit jarak */
+        font-weight: normal;
+        text-align: center;
+    }
+
+    /* Hapus margin agar Logo dan Ikon bisa mentok ke tepi */
+    header .top a, header .top form {
+        margin: 0;
+    }
+}

@@ -81,8 +81,13 @@ function Desktop(slides) {
     for (const slide of slides) { 
         htmlOutput += `
             <article>
-                <img class="side-image-placeholder" src="${slide.image}" alt="${slide.title}"> 
-                <p class="center-caption">${slide.title}</p>
+                <form action="test.html" method="get">
+                    <input type="hidden" name="test" value="${slide.title}">
+                    <button class="btn">
+                        <img class="side-image-placeholder" src="${slide.image}" alt="${slide.title}"> 
+                        <p class="center-caption">${slide.title}</p>
+                    </button>
+                </form>
             </article>
         `;
     }
@@ -96,8 +101,10 @@ function Desktop(slides) {
 
 // Inisialisasi saat dimuat
 document.addEventListener("DOMContentLoaded", function() {
+    
     // Jalankan showSlides untuk menginisialisasi carousel mobile
     showSlides(slideIndex);
+
     // Jalankan Desktop untuk mengisi konten desktop (berjalan baik di kedua kasus)
     Desktop(slidesData);
 });

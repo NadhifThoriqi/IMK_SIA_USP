@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Mata Kuliah</title>
+    <link rel="stylesheet" href="src/css/akademik.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="schedule-container">
+        
+        <div class="semester-header">
+            <select class="semester-dropdown" id="semesterSelector" onchange="toggleSemester(this.value)">
+                <option value="1">1 (Ganjil) ⌄</option>
+                <option value="2">2 (Genap) ⌄</option>
+            </select>
+        </div>
+
+        <table class="course-table semester-1 is-active" id="table-semester-1">
+            <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>KODE</th>
+                    <th>NAMA</th>
+                    <th>SKS</th>
+                    <th>DOSEN PENGAMPU</th>
+                    <th>HARI</th>
+                    <th>JAM MULAI</th>
+                    <th>JAM SELESAI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>A02101</td>
+                    <td>Pengantar Teknologi Informasi Reguler</td>
+                    <td>2</td>
+                    <td>Sinthia Istikomah, S.Kom, M.Eng</td>
+                    <td>Selasa</td>
+                    <td>09:30</td>
+                    <td>11:10</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>A02103</td>
+                    <td>Algoritma dan Pemrograman Reguler</td>
+                    <td>3</td>
+                    <td>Mokhamad Solikin, M.Kom.</td>
+                    <td>Jumat</td>
+                    <td>14:30</td>
+                    <td>17:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>A02105</td>
+                    <td>Kalkulus Reguler</td>
+                    <td>3</td>
+                    <td>Joko Suprianto, M.Kom.</td>
+                    <td>Senin</td>
+                    <td>09:30</td>
+                    <td>12:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>A02107</td>
+                    <td>Statistika dan Probabilitas Dasar Reguler</td>
+                    <td>3</td>
+                    <td>Ir. Masruki Khabib, M.T.</td>
+                    <td>Kamis</td>
+                    <td>14:00</td>
+                    <td>16:30</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>A02109</td>
+                    <td>Aljabar Linear Reguler</td>
+                    <td>3</td>
+                    <td>Joko Suprianto, M.Kom.</td>
+                    <td>Senin</td>
+                    <td>12:40</td>
+                    <td>15:10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>A02111</td>
+                    <td>Pendidikan Agama Reguler</td>
+                    <td>2</td>
+                    <td>Teguh Santoso, M.Ag.</td>
+                    <td>Senin</td>
+                    <td>15:10</td>
+                    <td>16:10</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>A02113</td>
+                    <td>Kewarganegaraan Reguler</td>
+                    <td>2</td>
+                    <td>Dr. Murdiansyah Herman, S.Sos, M.AP</td>
+                    <td>Kamis</td>
+                    <td>11:00</td>
+                    <td>12:40</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="course-table semester-2" id="table-semester-2">
+            <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>KODE</th>
+                    <th>NAMA</th>
+                    <th>SKS</th>
+                    <th>DOSEN PENGAMPU</th>
+                    <th>HARI</th>
+                    <th>JAM MULAI</th>
+                    <th>JAM SELESAI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="8" style="text-align: center; font-style: italic;">
+                        Data Mata Kuliah Semester 2 Belum Tersedia.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="schedule-footer">
+            <div class="total-sks-row">
+                <span class="label">TOTAL SKS</span>
+                <span class="value">18</span>
+            </div>
+
+            <div class="status-row">
+                <span class="label">STATUS</span>
+                <button class="status-button status-accepted">DITERIMA</button>
+            </div>
+        </div>
+    </div>
+    <script src="src/js/akademik.js"></script>
+</body>
+</html>

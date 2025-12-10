@@ -1,0 +1,140 @@
+/* Variabel Warna (Sama seperti file sebelumnya agar konsisten) */
+:root {
+    --bg-dark: #2c2f33; /* Warna latar belakang utama gelap */
+    --bg-darker: #23272a; /* Warna latar belakang elemen/container */
+    --text-light: #f6f6f6; /* Warna teks utama */
+    --text-faint: #b9bbbe; /* Warna teks redup/sekunder */
+    --accent-green: #43b581; /* Warna hijau untuk tombol Download */
+    --border-color: #4f545c; /* Garis pemisah */
+    --dropdown-bg: #4f545c; /* Latar belakang dropdown */
+    --summary-bg: #36393f; /* Latar belakang baris ringkasan (sedikit lebih terang) */
+}
+
+/* Reset dan Gaya Dasar */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.score-container {
+    width: 100%;
+    max-width: 1000px; /* Lebar maksimal container */
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Header Semester dan Tombol --- */
+.semester-header {
+    display: flex;
+    justify-content: flex-start; /* Elemen di kiri */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.semester-dropdown {
+    background-color: var(--dropdown-bg);
+    color: var(--text-light);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.download-button {
+    background-color: var(--accent-green);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.download-button:hover {
+    background-color: #58c792;
+}
+
+/* --- Tabel --- */
+.score-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.score-table th, .score-table td {
+    padding: 15px 10px;
+    text-align: left;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+}
+
+/* Header Tabel */
+.score-table thead th {
+    color: var(--text-faint);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Body Tabel */
+.score-table tbody td {
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+/* Kolom Angka (NO, SKS, NILAI, BOBOT, SXN) - Rata Kanan */
+.score-table td:nth-child(1),
+.score-table td:nth-child(4), 
+.score-table td:nth-child(5), 
+.score-table td:nth-child(6), 
+.score-table td:nth-child(7) {
+    text-align: center;
+}
+
+.score-table td:nth-child(5) {
+    font-weight: 700; /* NILAI (A, B, C) lebih tebal */
+}
+
+/* --- Baris Ringkasan (Footer) --- */
+.summary-row {
+    font-weight: 700;
+}
+
+.summary-row.total-sks-row {
+    background-color: var(--bg-darker); /* Latar belakang berbeda */
+}
+
+.summary-row.total-ip-row {
+    background-color: var(--bg-darker); /* Latar belakang berbeda */
+}
+
+.summary-row .summary-label {
+    text-align: left;
+    color: var(--text-faint);
+    font-size: 1em;
+    padding-left: 20px;
+}
+
+.summary-row .summary-value {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1em;
+    font-weight: 700;
+}

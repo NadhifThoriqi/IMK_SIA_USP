@@ -1,6 +1,5 @@
 const header = document.getElementById("header")
 const profile = document.getElementById("profile")
-const copyright = document.getElementById("copyright")
 const home_path = document.querySelectorAll(".input-grub")
 const NIMRandom = `${new Date().getFullYear()}${new Date().getMonth()}${new Date().getDate()}0${new Date().getDay()}`;
 const params = new URLSearchParams(window.location.search)
@@ -29,31 +28,26 @@ if (Number.isNaN(parseFloat(params.get("nama_nim"))) && (params.get("nama_nim") 
 profile.innerHTML = profil
 
 header.innerHTML = `
-    <a href="home.html?nama_nim=${params.get("nama_nim")}&password=${params.get("password")}" class="logo-placeholder"></a>
     <h1>HOME</h1>
-    <form action="test.html" method="get">
+    <div class="top">
+        <a href="home.html?nama_nim=${params.get("nama_nim")}&password=${params.get("password")}" class="logo-placeholder"></a>
+        <form action="test.html" method="get">
         <input type="hidden" name="test" value="Notifikasi">
         <input type="hidden" name="home_nim" value="nama_nim=${params.get("nama_nim")}">
-        <input type="hidden" name="home_password" value="password=${params.get("password")}">
-        <button class="btn background-red-black">
-            <i class="fas fa-bell header-icon"></i>
-        </button>
-    </from>
+            <input type="hidden" name="home_password" value="password=${params.get("password")}">
+            <button class="btn background-red-black">
+                <i class="fas fa-bell header-icon"></i>
+            </button>
+        </from>
+    </div>
 `;
 
 home_path.forEach(element => {
     element.innerHTML += `
-        <input type="hidden" name="home_nim" value="nama_nim=${params.get("nama_nim")}">
-        <input type="hidden" name="home_password" value="password=${params.get("password")}">
+        <input type="hidden" name="nama_nim" value="${params.get("nama_nim")}">
+        <input type="hidden" name="password" value="${params.get("password")}">
 `;
 });
-
-copyright.innerHTML = `
-    <a href="kelompok.html?home_nim=nama_nim=${params.get("nama_nim")}&home_password=password=${params.get("password")}" id="copyright-footer">
-        &copy; 2025 Tugas Kelompok IMK-SIA-USP
-    </a>
-`
-
 
 // 1. Ambil semua elemen
 const items = document.querySelectorAll('.bounce-in-fwd');

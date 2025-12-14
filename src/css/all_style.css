@@ -32,7 +32,7 @@ body {
 }
 
 .background-red {
-    background-color: red;
+    background-color: rgb(255, 45, 45);
     color: white;
 }
 
@@ -124,8 +124,8 @@ body {
 
 @media (max-width: 600px) {
     /* Container utama (header) diatur menjadi kolom, menentukan urutan vertikal */
-    header {
-        flex-direction: column; 
+    header.active {
+        flex-direction: column;
         padding: 15px; /* Kurangi padding di mobile */
     }
 
@@ -141,20 +141,24 @@ body {
     }
     
     /* Mengatur Urutan Baru: .top (Kiri & Kanan) di atas, h1 (Tengah) di bawah */
-    header .top {
+    header.active .top {
         order: 1; /* Akan muncul di atas 'h1' */
         width: 100%;
         display: flex; /* Memastikan Logo dan Ikon tetap berdampingan */
         justify-content: space-between;
         align-items: center;
     }
-    
-    header h1 {
+
+    header.active h1 {
         order: 2; /* Akan muncul di bawah .top */
         width: 100%;
-        font-size: 1.3em; /* Kecilkan sedikit font di mobile */
         margin-top: 10px; /* Tambahkan sedikit jarak */
-        font-weight: normal;
+        font-size: 1.5em; /* Kecilkan sedikit font di mobile */
+    }
+    
+    header h1 {
+        font-size: 2em;
+        /* font-weight: bold; */
         text-align: center;
     }
 

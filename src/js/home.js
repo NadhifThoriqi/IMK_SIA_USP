@@ -27,8 +27,7 @@ if (Number.isNaN(parseFloat(params.get("nama_nim"))) && (params.get("nama_nim") 
 
 profile.innerHTML = profil
 
-header.innerHTML = `
-    <h1>HOME</h1>
+header.innerHTML += `
     <div class="top">
         <a href="home.html?nama_nim=${params.get("nama_nim")}&password=${params.get("password")}" class="logo-placeholder"></a>
         <form action="test.html" method="get">

@@ -12,7 +12,7 @@ if (params.get('home_nim')) {
                 </button>
             </from>
         </div>
-        <h1 class="background-red text-flicker-in-glow">NAMA ANGGOTA KELOMPOK IMK-SIA-USP</h1>
+        <h1 class="background-red text-flicker-in-glow active">NAMA ANGGOTA KELOMPOK IMK-SIA-USP</h1>
     `;
 } else {
     header.innerHTML = `
@@ -25,7 +25,7 @@ if (params.get('home_nim')) {
                 </button>
             </from>
         </div>
-        <h1 class="background-red text-flicker-in-glow">NAMA ANGGOTA KELOMPOK IMK-SIA-USP</h1>
+        <h1 class="background-red text-flicker-in-glow active">NAMA ANGGOTA KELOMPOK IMK-SIA-USP</h1>
     `;
 }
 

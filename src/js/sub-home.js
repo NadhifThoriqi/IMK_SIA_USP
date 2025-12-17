@@ -1,11 +1,14 @@
 const param = new URLSearchParams(window.location.search)
-const copyright = document.querySelector("div#copyright")
 
-copyright.innerHTML = `
-    <a href="kelompok.html?home_nim=nama_nim=${param.get("nama_nim")}&home_password=password=${param.get("password")}" id="copyright-footer">
-        &copy; 2025 Tugas Kelompok IMK-SIA-USP
-    </a>
-`
+try {
+    document.querySelector("div#copyright").innerHTML = `
+        <a href="kelompok.html?home_nim=nama_nim=${param.get("nama_nim")}&home_password=password=${param.get("password")}" id="copyright-footer">
+            &copy; 2025 Tugas Kelompok IMK-SIA-USP
+        </a>
+    `
+} catch {
+    console.log("Terjadi kesalahan!");
+}
 
 document.querySelector("header#header-group").innerHTML += `
     <div class="top">
@@ -17,7 +20,7 @@ document.querySelector("header#header-group").innerHTML += `
             <button class="btn background-red-black">
                 <i class="fas fa-bell header-icon"></i>
             </button>
-        </from>
+        </form>
     </div>
 `;
 // <h1>HOME</h1>

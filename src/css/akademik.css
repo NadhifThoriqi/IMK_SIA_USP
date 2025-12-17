@@ -15,10 +15,8 @@
 /* ===================================================
    2. RESET DAN GAYA DASAR
    =================================================== */
-body {
-    font-family: 'Roboto', sans-serif;
+main { 
     background-color: var(--bg-darker);
-    color: var(--text-light);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -206,4 +204,33 @@ body {
     color: var(--accent-green);
     font-size: 1.2em;
     font-weight: 900;
+}
+
+@media (max-width: 600px) {
+        body { padding: 10px; }
+    
+    .schedule-container, .score-container {
+        padding: 15px;
+    }
+
+    /* Solusi Scroll Tabel di HP */
+    .course-table.is-active, 
+    .score-table.is-active {
+        display: block; /* Mengubah table jadi block agar bisa di-scroll */
+        width: 100%;
+        overflow-x: auto; /* Scroll horizontal aktif */
+        white-space: nowrap; /* Mencegah teks turun ke bawah (berantakan) */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Perbaikan tampilan dropdown di HP */
+    .semester-header {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .semester-dropdown, .download-button {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
 }

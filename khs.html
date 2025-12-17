@@ -4,135 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu Hasil Studi (KHS)</title>
-    <link rel="stylesheet" href="src/css/akademik.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="src/assets/usp.webp">
+    <link rel="stylesheet" href="src/css/all_style.css">
+    <link rel="stylesheet" href="src/css/animation.css">
+    <link rel="stylesheet" href="src/css/akademik.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <div class="score-container">
-        
-        <div class="semester-header">
-            <select class="semester-dropdown" id="khsSemesterSelector" onchange="toggleKhsSemester(this.value)">
-                <option value="1">1 (Ganjil) ⌄</option>
-                <option value="2">2 (Genap) ⌄</option>
-            </select>
-            <button class="download-button">
-                Download
-            </button>
+    <header id="header-group" class="background-red">
+        <h1> NILAI </h1>
+    </header>
+    <hr class="background-black" />
+
+    <main>
+        <div class="score-container">
+            
+            <div class="semester-header">
+                <select class="semester-dropdown" id="khsSemesterSelector" onchange="toggleKhsSemester(this.value)">
+                    <option value="1">1 (Ganjil) ⌄</option>
+                    <option value="2">2 (Genap) ⌄</option>
+                </select>
+                <button class="download-button">
+                    Download
+                </button>
+            </div>
+
+            <table class="score-table semester-1 is-active" id="khs-table-semester-1">
+                <thead>
+                    <tr>
+                        <th>NO.</th>
+                        <th>KODE</th>
+                        <th>MATA KULIAH</th>
+                        <th>SKS</th>
+                        <th>NILAI</th>
+                        <th>BOBOT</th>
+                        <th>SXN</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>A02101</td>
+                        <td>Pengantar Teknologi Informasi</td>
+                        <td>2</td>
+                        <td>A</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>A02103</td>
+                        <td>Algoritma dan Pemrograman</td>
+                        <td>3</td>
+                        <td>A</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>A02105</td>
+                        <td>Kalkulus</td>
+                        <td>3</td>
+                        <td>A</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>A02107</td>
+                        <td>Statistika dan Probabilitas Dasar</td>
+                        <td>3</td>
+                        <td>A</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>A02109</td>
+                        <td>Aljabar Linear</td>
+                        <td>3</td>
+                        <td>A</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>A02111</td>
+                        <td>Pendidikan Agama</td>
+                        <td>2</td>
+                        <td>A</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>A02113</td>
+                        <td>Kewarganegaraan</td>
+                        <td>2</td>
+                        <td>A</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    
+                    <tr class="summary-row total-sks-row">
+                        <td colspan="3" class="summary-label">Jumlah SKS</td>
+                        <td class="summary-value sks-value">18</td>
+                        <td colspan="3"></td> 
+                    </tr>
+
+                    <tr class="summary-row total-ip-row">
+                        <td colspan="3" class="summary-label">Indeks Prestasi</td>
+                        <td class="summary-value ip-value">4.00</td>
+                        <td colspan="3"></td> 
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="score-table semester-2" id="khs-table-semester-2">
+                <thead>
+                    <tr>
+                        <th>NO.</th>
+                        <th>KODE</th>
+                        <th>MATA KULIAH</th>
+                        <th>SKS</th>
+                        <th>NILAI</th>
+                        <th>BOBOT</th>
+                        <th>SXN</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="summary-row">
+                        <td colspan="7" style="text-align: center; font-style: italic; color: var(--text-faint);">
+                            Data Nilai Kartu Hasil Studi Semester 2 Belum Tersedia.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
         </div>
-
-        <table class="score-table semester-1 is-active" id="khs-table-semester-1">
-            <thead>
-                <tr>
-                    <th>NO.</th>
-                    <th>KODE</th>
-                    <th>MATA KULIAH</th>
-                    <th>SKS</th>
-                    <th>NILAI</th>
-                    <th>BOBOT</th>
-                    <th>SXN</th> 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>A02101</td>
-                    <td>Pengantar Teknologi Informasi</td>
-                    <td>2</td>
-                    <td>A</td>
-                    <td>4</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>A02103</td>
-                    <td>Algoritma dan Pemrograman</td>
-                    <td>3</td>
-                    <td>A</td>
-                    <td>4</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>A02105</td>
-                    <td>Kalkulus</td>
-                    <td>3</td>
-                    <td>A</td>
-                    <td>4</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>A02107</td>
-                    <td>Statistika dan Probabilitas Dasar</td>
-                    <td>3</td>
-                    <td>A</td>
-                    <td>4</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>A02109</td>
-                    <td>Aljabar Linear</td>
-                    <td>3</td>
-                    <td>A</td>
-                    <td>4</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>A02111</td>
-                    <td>Pendidikan Agama</td>
-                    <td>2</td>
-                    <td>A</td>
-                    <td>4</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>A02113</td>
-                    <td>Kewarganegaraan</td>
-                    <td>2</td>
-                    <td>A</td>
-                    <td>4</td>
-                    <td>12</td>
-                </tr>
-                
-                <tr class="summary-row total-sks-row">
-                    <td colspan="3" class="summary-label">Jumlah SKS</td>
-                    <td class="summary-value sks-value">18</td>
-                    <td colspan="3"></td> 
-                </tr>
-
-                <tr class="summary-row total-ip-row">
-                    <td colspan="3" class="summary-label">Indeks Prestasi</td>
-                    <td class="summary-value ip-value">4.00</td>
-                    <td colspan="3"></td> 
-                </tr>
-            </tbody>
-        </table>
-        
-        <table class="score-table semester-2" id="khs-table-semester-2">
-            <thead>
-                <tr>
-                    <th>NO.</th>
-                    <th>KODE</th>
-                    <th>MATA KULIAH</th>
-                    <th>SKS</th>
-                    <th>NILAI</th>
-                    <th>BOBOT</th>
-                    <th>SXN</th> 
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="summary-row">
-                    <td colspan="7" style="text-align: center; font-style: italic; color: var(--text-faint);">
-                        Data Nilai Kartu Hasil Studi Semester 2 Belum Tersedia.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        
-    </div>
+    </main>
+    <script src="src/js/sub-home.js"></script>
     <script src="src/js/akademik.js"></script>
+    <script src="src/js/bubble.js"></script>
 </body>
 </html>

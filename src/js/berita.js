@@ -1,8 +1,8 @@
 const slidesData = [
     { title: "Pembukaan kafe baru di area kampus", image: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?fit=crop&w=800&q=80'},
     { title: "Gedung baru diresmikan oleh Rektor", image: 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?fit=crop&w=800&q=80'},
-    { title: "Liputan eksklusif acara kampus", image: 'https://scontent.cdninstagram.com/v/t39.30808-6/581299965_834709669101150_452297318664571056_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mzc2NjQzNzQ2MTI1Nzk3NjIzMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=m9MhW9W73ikQ7kNvwGr5g-4&_nc_oc=Adn_fYrqQIn8EJYYYwJznFDXwTRglJbNrW-MwzNG2s7ytN8gEhz_gYo1Q2Vtix8VbCs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=Mbtm5XqAmjpGxbkDzVKLCA&oh=00_AfmI_TWhXmAR4gRkQtSJCBGLEnoWlGBzdoeV7OXLEfAgPA&oe=6958FF0A'},
-    { title: "Kabar terbaru SaFin Univ", image: 'https://scontent.cdninstagram.com/v/t39.30808-6/557628248_801516122420505_5679954427470561816_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MzczNzI0OTU3MDgxNjYyMTA1NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=idVznXkIpE4Q7kNvwF1nbim&_nc_oc=AdnHPbKypGAkmFuU3XcTsTZoLvdq90GldKZ0MS8y4J5K73pYfs9NDR-oqgrKjRfP0jM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=aFH7z98DBDTRhgsuSTazHQ&oh=00_AfmsZo70sq-nL6lasVc_GisvwjpRJaupZJrjGrvYR9f2Jg&oe=695907C7'},
+    { title: "Liputan eksklusif acara kampus", image: './src/assets/wisuda.jpg'},
+    { title: "Kabar terbaru SaFin Univ", image: './src/assets/pmb info.jpg'},
     { title: "Berita PATI terkini", image: 'https://beritabanten.com/wp-content/uploads/2025/08/Demo-penertiban-karaoke-di-Kantor-DPMPTSP-Pati.gif' }
 ];
 

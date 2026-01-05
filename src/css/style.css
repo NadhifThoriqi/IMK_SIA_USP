@@ -16,6 +16,7 @@ main {
 }
 
 .usp-logo {
+    margin-top: 20px;
     width: 130px; /* Logo sedikit lebih kecil */
     height: 170px; 
     background-image: url("../assets/usp.webp");
@@ -184,6 +185,12 @@ main {
     header h1 {
         font-size: 2em;
         font-weight: bold;
+    }
+    
+    .usp-logo{
+        width: 117px; /* Logo sedikit lebih kecil */
+        height: 153px; 
+        margin-top: 50px;
     }
 
     .input-group {

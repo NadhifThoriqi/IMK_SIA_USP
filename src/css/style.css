@@ -16,8 +16,8 @@ main {
 }
 
 .usp-logo {
-    width: 150px; /* Logo sedikit lebih kecil */
-    height: 190px; 
+    width: 130px; /* Logo sedikit lebih kecil */
+    height: 170px; 
     background-image: url("../assets/usp.webp");
     background-size: cover; /* Pastikan gambar menutupi seluruh elemen */
     background-position: center; /* Pusatkan gambar */
